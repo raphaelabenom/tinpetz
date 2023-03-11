@@ -29,12 +29,12 @@ Essa é uma aplicação MVP, a muitas implementações ainda a serem desenvolvid
 
 ## Screenshots
 
-![App Screenshot](https://i.ibb.co/gM3PxbZ/Group-21.png) pode ser testado usando emulador ![BlueStacks](https://www.bluestacks.com/download.html)
+![App Screenshot](https://i.ibb.co/gM3PxbZ/Group-21.png) 
 
 
 ## Instalação Local
 - Instalação apk no seu celular android:
-[Release](https://github.com/raphaelabenom/tinpetz-app/releases)
+[Release](https://github.com/raphaelabenom/tinpetz-app/releases) pode ser testado usando emulador ![BlueStacks](https://www.bluestacks.com/download.html)
 <br>
 - Certifique-se de ter instalado o Flutter SDK, Dart SDK e o Android Studio em seu computador.
 
