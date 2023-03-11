@@ -1,0 +1,246 @@
+import '/flutter/flutter_theme.dart';
+import '/flutter/flutter_util.dart';
+import '/pages/create_post/create_post_widget.dart';
+import '/pages/create_story/create_story_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'create_modal_model.dart';
+export 'create_modal_model.dart';
+
+class CreateModalWidget extends StatefulWidget {
+  const CreateModalWidget({Key? key}) : super(key: key);
+
+  @override
+  _CreateModalWidgetState createState() => _CreateModalWidgetState();
+}
+
+class _CreateModalWidgetState extends State<CreateModalWidget> {
+  late CreateModalModel _model;
+
+  @override
+  void setState(VoidCallback callback) {
+    super.setState(callback);
+    _model.onUpdate();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => CreateModalModel());
+  }
+
+  @override
+  void dispose() {
+    _model.maybeDispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: BoxDecoration(
+        color: FlutterTheme.of(context).secondaryBackground,
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 3.0,
+            color: Color(0x33000000),
+            offset: Offset(0.0, -1.0),
+          )
+        ],
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+            child: InkWell(
+              onTap: () async {
+                await Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.bottomToTop,
+                    duration: Duration(milliseconds: 200),
+                    reverseDuration: Duration(milliseconds: 200),
+                    child: CreateStoryWidget(),
+                  ),
+                );
+              },
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.9,
+                decoration: BoxDecoration(
+                  color: FlutterTheme.of(context).primaryBackground,
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 3.0,
+                      color: Color(0x3E000000),
+                      offset: Offset(0.0, 2.0),
+                    )
+                  ],
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 12.0, 8.0, 12.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 0.0, 4.0),
+                            child: Text(
+                              'Criar Story',
+                              style: FlutterTheme.of(context).title3,
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              'Compartilhe um vídeo do seu pet.',
+                              style: FlutterTheme.of(context).bodyText2,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+            child: Container(
+              width: MediaQuery.of(context).size.width * 0.9,
+              height: 0.0,
+              decoration: BoxDecoration(
+                color: FlutterTheme.of(context).dark600,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 3.0,
+                    color: Color(0x3E000000),
+                    offset: Offset(0.0, 2.0),
+                  )
+                ],
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 16.0, 8.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  16.0, 0.0, 0.0, 0.0),
+                              child: Text(
+                                'Create Post',
+                                style: FlutterTheme.of(context)
+                                    .title3
+                                    .override(
+                                      fontFamily: 'Urbanist',
+                                      color: FlutterTheme.of(context)
+                                          .tertiaryColor,
+                                    ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 0.0, 0.0),
+                                child: Text(
+                                  'Share a photo that will appear in the timeline.',
+                                  style: FlutterTheme.of(context).bodyText1,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () async {
+              await Navigator.push(
+                context,
+                PageTransition(
+                  type: PageTransitionType.bottomToTop,
+                  duration: Duration(milliseconds: 200),
+                  reverseDuration: Duration(milliseconds: 200),
+                  child: CreatePostWidget(),
+                ),
+              );
+            },
+            child: Container(
+              width: MediaQuery.of(context).size.width * 0.9,
+              decoration: BoxDecoration(
+                color: FlutterTheme.of(context).primaryBackground,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 3.0,
+                    color: Color(0x3E000000),
+                    offset: Offset(0.0, 2.0),
+                  )
+                ],
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(8.0, 12.0, 8.0, 12.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 0.0, 4.0),
+                            child: Text(
+                              'Criar postagem',
+                              style: FlutterTheme.of(context).title3,
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              'Compartilhe fotos em sua linha do tempo.',
+                              style: FlutterTheme.of(context).bodyText2,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
