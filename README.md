@@ -33,11 +33,9 @@ Essa é uma aplicação MVP, a muitas implementações ainda a serem desenvolvid
 
 
 ## Instalação Local
-- Para a instalação no seu android:
+- Instalação apk no seu celular android:
 [Release](https://github.com/raphaelabenom/tinpetz-app/releases)
-
-
-
+<br>
 - Certifique-se de ter instalado o Flutter SDK, Dart SDK e o Android Studio em seu computador.
 - Faça o download do projeto em seu computador local.
 - Abra o Android Studio e selecione a opção (Abrir um projeto existente do Android Studio).
