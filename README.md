@@ -25,7 +25,7 @@ Instalação Local
 
 **Server:** Firebase
 
-Essa aplicação é um MVP, a muitas implementações ainda a serem desenvolvida pelo o tamanho do escopo do projeto apresentado.
+Essa é uma aplicação MVP, a muitas implementações ainda a serem desenvolvida. Inconsistências podem surgir durante seu uso.
 
 ## Screenshots
 
