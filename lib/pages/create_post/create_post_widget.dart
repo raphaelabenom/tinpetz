@@ -323,11 +323,11 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
                     children: [
                       FlutterPlacePicker(
                         iOSGoogleMapsApiKey:
-                            'AIzaSyAA1Q3vwvXofoeR4PR-I6EVo6HUJ4Cy0-0',
+                            '',
                         androidGoogleMapsApiKey:
-                            'AIzaSyA9kb_T8cjNAPxV2m_Ewb-ucXIeMY_digs',
+                            '',
                         webGoogleMapsApiKey:
-                            'AIzaSyDSwSwIhH_V546OQmm9PQGVyzCkHBRycL0',
+                            '',
                         onSelect: (place) async {
                           setState(() => _model.placePickerValue = place);
                         },
