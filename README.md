@@ -29,7 +29,7 @@ Essa é uma aplicação MVP, a muitas implementações ainda a serem desenvolvid
 
 ## Screenshots
 
-![App Screenshot](https://i.ibb.co/gM3PxbZ/Group-21.png) 
+![App Screenshot](/view_app.png)
 
 
 ## Instalação Local
