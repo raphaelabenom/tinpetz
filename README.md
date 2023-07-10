@@ -61,14 +61,3 @@ Essa ação produzirá os arquivos essenciais para a compilação do projeto.
 - Aguarde o Android Studio baixar e instalar todas as dependências do projeto.
 
 
-
-
-
-## Participantes:
-
-- [Raphael Abenom Santos Silva](https://github.com/raphaelabenom)
-- [Leonardo Lopes Gouveia]()
-- [Maria Karolina Beckman Pires]()
-- [Paola Cristina Fonseca]()
-- [Victor Hugo Lino da Silva]()
-- [Vilson Malaquias]()
